@@ -10,9 +10,9 @@ function setupDom(){
   var grayGear = graphicDoc.getElementById("bottom-gear");
   var bigGear = graphicDoc.getElementById("big-gear");
   
-  TweenMax.to(bigGear, 3, {rotation:360, transformOrigin:"50% 50%"});
-  TweenMax.to(orangeGear, 3, {rotation:-360, transformOrigin:"50% 50%"});
-  TweenMax.to(grayGear, 3, {rotation:-360, transformOrigin:"50% 50%"});
+  TweenMax.from(bigGear, 3, {rotation:360, transformOrigin:"50% 50%", repeat: 1, yoyo: true});  
+  TweenMax.from(orangeGear, 3, {rotation:-360, transformOrigin:"50% 50%", repeat: 1, yoyo: true});
+  TweenMax.from(grayGear, 3, {rotation:-360, transformOrigin:"50% 50%", repeat: 1, yoyo: true});
   
 }
 
