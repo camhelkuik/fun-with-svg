@@ -36,7 +36,9 @@ function setupDom(){
   TweenMax.from(dial, 2, {rotation: 120, transformOrigin: "80% 80%", delay: 3});
   
   //tree animation
-  // TweenMax.allTo(manager.allLeaves, 1, {tint:0x000000});
+  TweenMax.to(allLeaves, 0.5, {fill: "orange" });
+  TweenMax.from(singleLeaf, 2, {rotation: -25});
+  TweenMax.to(singleLeaf, 2, {rotation: 25});
 }
 
 
