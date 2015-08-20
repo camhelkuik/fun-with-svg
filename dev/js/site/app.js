@@ -24,7 +24,7 @@ function setupDom(){
   TweenMax.from(grayGear, 3, {rotation:-360, transformOrigin:"50% 50%", repeat: 1, yoyo: true});
   
   //robot animation
-  TweenMax.from(robot, 4, {x: 200});
+  TweenMax.from(robot, 4, {x: 400});
   TweenMax.from(winder, 4, {rotationY: 360, transformOrigin: "50% 50%"});
   TweenMax.from(dial, 2, {rotation: 120, transformOrigin: "80% 80%", delay: 3});
 }
