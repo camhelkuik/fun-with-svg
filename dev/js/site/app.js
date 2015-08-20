@@ -3,17 +3,30 @@ window.onload = setupDom;
 
 function setupDom(){
 
-  var graphic = document.getElementsByClassName("gears")[0];
-  var graphicDoc = graphic.contentDocument;
-    
-  var orangeGear = graphicDoc.getElementById("top-gear");
-  var grayGear = graphicDoc.getElementById("bottom-gear");
-  var bigGear = graphicDoc.getElementById("big-gear");
+  var gear = document.getElementsByClassName("gears")[0];
+  var gearDoc = gear.contentDocument;
   
+  var robot = document.getElementsByClassName("robot")[0];
+  var robotDoc = robot.contentDocument;
+  
+  //gear variables  
+  var orangeGear = gearDoc.getElementById("top-gear");
+  var grayGear = gearDoc.getElementById("bottom-gear");
+  var bigGear = gearDoc.getElementById("big-gear");
+  
+  //robot variables
+  var winder = robotDoc.getElementById("winder");
+  var dial = robotDoc.getElementById("dial");
+    
+  //gear animation
   TweenMax.from(bigGear, 3, {rotation:360, transformOrigin:"50% 50%", repeat: 1, yoyo: true});  
   TweenMax.from(orangeGear, 3, {rotation:-360, transformOrigin:"50% 50%", repeat: 1, yoyo: true});
   TweenMax.from(grayGear, 3, {rotation:-360, transformOrigin:"50% 50%", repeat: 1, yoyo: true});
   
+  //robot animation
+  TweenMax.from(robot, 4, {x: 200});
+  TweenMax.from(winder, 4, {rotationY: 360});
+  TweenMax.from(dial, 2, {rotation: 120, transformOrigin: "50% 50%"});
 }
 
 
