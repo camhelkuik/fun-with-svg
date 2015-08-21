@@ -22,7 +22,7 @@ function setupDom(){
   var dial = robotDoc.getElementById("dial");
   
   //tree variables
-  var allLeaves = treeDoc.getElementById("all-leaves");
+  var allLeaves = treeDoc.querySelectorAll("#all-leaves");
   var singleLeaf = treeDoc.getElementById("single-leaf");
     
   //gear animation
@@ -37,8 +37,8 @@ function setupDom(){
   
   //tree animation
   
-  TweenMax.to(allLeaves, 1, {fill: "orange"});
-  TweenMax.to(singleLeaf, 1, {fill: "orange"});
+  TweenMax.to(allLeaves, 1, {fill: "orange", delay: 2});
+  TweenMax.to(singleLeaf, 1, {fill: "orange", delay: 2});
  
   var tl = new TimelineMax({repeat: 1});
     
