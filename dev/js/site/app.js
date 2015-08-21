@@ -44,45 +44,12 @@ function setupDom(){
   TweenMax.to(allLeaves, 1, {fill: "orange", delay: 2});
   TweenMax.to(singleLeaf, 1, {fill: "orange", delay: 2});
  
-  var tl = new TimelineMax({repeat: 1});
+  var tl = new TimelineMax({repeat: 2});
     
   tl.to(singleLeaf, 1.5, {left: 300, rotation: -5, ease: Power1.easeOut})
-  .to(singleLeaf, 1.5, {top: "+=30", rotation: 5, ease: Power1.easeOut});
+  .to(singleLeaf, 1.5, {rotation: 5, ease: Power1.easeInOut});
   
   // TweenMax.to(singleLeaf, 4, {transformOrigin: '50% 50%'});
-  
-  // var tl = new TimelineMax({repeat: -1});
- //  tl.set(singleLeaf, { rotation: 5});
- //
- //
- //  swingLeaf();
- //  swingLeaf();
- //  swingLeaf();
- //
- //
- //  function swingLeaf() {
- //    tl.add([
- //      TweenMax.to(singleLeaf, 1.5, {
- //        left: 300,
- //        rotation: -5,
- //        ease: Power1.easeInOut
- //      }),
- //      TweenMax.to(singleLeaf, 1.5, {
- //        top: "+=30",
- //        ease: Power1.easeOut
- //      })
- //    ]).add([
- //      TweenMax.to(singleLeaf, 1.5, {
- //        left: 0,
- //        rotation: 5,
- //        ease: Power1.easeInOut
- //      }),
- //      TweenMax.to(singleLeaf, 1.5, {
- //        top: "+=30",
- //        ease: Power1.easeOut
- //      })
- //    ]);
- //  }
   
 }
 
