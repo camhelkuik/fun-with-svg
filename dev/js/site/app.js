@@ -36,23 +36,64 @@ function setupDom(){
   TweenMax.from(dial, 2, {rotation: 120, transformOrigin: "80% 80%", delay: 3});
   
   //tree animation
-  TweenMax.to(allLeaves, 0.5, {fill: "orange" });
-  TweenMax.from(singleLeaf, 2, {rotation: -25});
-  TweenMax.to(singleLeaf, 2, {rotation: 25});
+  
+  TweenMax.to(allLeaves, 1, {fill: "orange"});
+  TweenMax.to(singleLeaf, 1, {fill: "orange"});
+ 
+  var tl = new TimelineMax({repeat: 1});
+    
+  tl.to(singleLeaf, 1.5, {left: 300, rotation: -5, ease: Power1.easeOut})
+  .to(singleLeaf, 1.5, {top: "+=30", rotation: 5, ease: Power1.easeOut});
+  
+  // TweenMax.to(singleLeaf, 4, {transformOrigin: '50% 50%'});
+  
+  // var tl = new TimelineMax({repeat: -1});
+ //  tl.set(singleLeaf, { rotation: 5});
+ //
+ //
+ //  swingLeaf();
+ //  swingLeaf();
+ //  swingLeaf();
+ //
+ //
+ //  function swingLeaf() {
+ //    tl.add([
+ //      TweenMax.to(singleLeaf, 1.5, {
+ //        left: 300,
+ //        rotation: -5,
+ //        ease: Power1.easeInOut
+ //      }),
+ //      TweenMax.to(singleLeaf, 1.5, {
+ //        top: "+=30",
+ //        ease: Power1.easeOut
+ //      })
+ //    ]).add([
+ //      TweenMax.to(singleLeaf, 1.5, {
+ //        left: 0,
+ //        rotation: 5,
+ //        ease: Power1.easeInOut
+ //      }),
+ //      TweenMax.to(singleLeaf, 1.5, {
+ //        top: "+=30",
+ //        ease: Power1.easeOut
+ //      })
+ //    ]);
+ //  }
+  
 }
 
 
 // function setupDom(){
-//   changeAllTheSources();
-//   var graphic = Document.getElementsByClassName('man-driver')[0];
-//   var graphicDoc = graphic.contentDocument;
-//
-//   var arm = graphicDoc.getElementById("steeting-wheel_x2f_hand");
-//   var car = graphicDoc.getElementById("car");
-//   console.log(car);
-//
-//   TweenMax.from(arm, 1, {tranformOrigin: '100% 100%', rotation: -45});
-//   TweenMax.to(arm, .5, {transformOrigin: '50% 50%', scale: 1.2, delay: .9});
-//
-//   TweenMax.from(car, 1, {x: 200});
-// }
+  //   changeAllTheSources();
+  //   var graphic = Document.getElementsByClassName('man-driver')[0];
+  //   var graphicDoc = graphic.contentDocument;
+  //
+  //   var arm = graphicDoc.getElementById("steeting-wheel_x2f_hand");
+  //   var car = graphicDoc.getElementById("car");
+  //   console.log(car);
+  //
+  //   TweenMax.from(arm, 1, {tranformOrigin: '100% 100%', rotation: -45});
+  //   TweenMax.to(arm, .5, {transformOrigin: '50% 50%', scale: 1.2, delay: .9});
+  //
+  //   TweenMax.from(car, 1, {x: 200});
+  // }
