@@ -20,6 +20,8 @@ function setupDom(){
   //robot variables
   var winder = robotDoc.getElementById("winder");
   var dial = robotDoc.getElementById("dial");
+  var spring = robotDoc.getElementById("spring");
+  var robotTop = robotDoc.getElementById("robot-top");
   
   //tree variables
   var allLeaves = treeDoc.querySelectorAll("#all-leaves");
@@ -34,6 +36,8 @@ function setupDom(){
   TweenMax.from(robot, 4, {x: 400});
   TweenMax.from(winder, 4, {rotationY: 360, transformOrigin: "50% 50%"});
   TweenMax.from(dial, 2, {rotation: 120, transformOrigin: "80% 80%", delay: 3});
+  TweenMax.from(spring, 1, {scaleY: 0, transformOrigin:"100% 100%", repeat: 2, yoyo: true, delay: 0.5});
+  TweenMax.from(robotTop, 1, {y: 75, transfomrOrigin: "100% 100%", repeat: 2, yoyo: true, delay: 0.5});
   
   //tree animation
   
